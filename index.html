@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>movies app</title>
+  </head>
+  <body class="bg-gray-900">
+    <!-- Header -->
+    <nav class="bg-gray-900 pb-2 px-5 border-b">
+      <h1 class="ml-10 mt-4 text-xl font-mono font-medium text-green-300">
+        Movies App
+      </h1>
+    </nav>
+
+    <!-- search bar  -->
+    <section class="">
+      <div
+        class="
+          bg-gray-800
+          flex flex-col
+          items-center
+          justify-center
+          py-7
+          md:max-w-4xl
+          max-w-xs
+          mx-auto
+          rounded-xl
+          border-2 border-green-500
+          mt-4
+          gap-y-2
+        "
+      >
+        <label class="text-3xl font-serif text-green-400" for="#search"
+          >Search movies</label
+        >
+        <form id="form">
+          <input
+            id="search"
+            type="text "
+            placeholder="Search Movies"
+            class="
+              pl-4
+              md:pr-48
+              outline-none
+              rounded-md
+              border-gray-900 border-2
+              py-2
+              text-gray-800
+              font-bold font-mono
+            "
+          />
+        </form>
+      </div>
+    </section>
+    <section
+      id="movies"
+      class="
+        mx-auto
+        container
+        flex flex-wrap
+        justify-center
+        gap-2
+        mt-10
+        max-w-5xl
+      "
+    ></section>
+    <section
+      id="searchmovies"
+      class="
+        mx-auto
+        container
+        flex flex-wrap
+        justify-center
+        gap-2
+        mt-10
+        max-w-5xl
+      "
+    ></section>
+  </body>
+  <script src="./index.js"></script>
+</html>

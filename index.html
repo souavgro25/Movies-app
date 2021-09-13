@@ -10,13 +10,32 @@
     />
     <title>movies app</title>
   </head>
-  <body class="bg-gray-900">
+  <body class="bg-gray-900   ">
     <!-- Header -->
-    <nav class="bg-gray-900 pb-2 px-5 border-b">
-      <h1 class="ml-10 mt-4 text-xl font-mono font-medium text-green-300">
+    <div class="flex flex-col sticky top-0">
+    <nav class="bg-gray-900 pb-2 px-5 border-b flex justify-between items-center  py-2">
+      <h1 class="md:ml-10 ml-5 text-xl font-mono font-medium text-green-300">
         Movies App
       </h1>
+      <div class="hidden md:flex text-green-300 gap-x-5 font-mono text-sm">
+        <p class="cursor-pointer upcoming">Upcoming Movies</p>
+        <p class="cursor-pointer Top">Top_Rated Movies</p>
+        <p class="cursor-pointer Popular">Popular Movies</p>
+        <p class="cursor-pointer Trending">Trending movies</p>
+      </div>
+      <div class="md:hidden">
+        <svg id="toggle" class=" text-green-300 h-7 w-7  " xmlns="http://www.w3.org/2000/svg"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </div>
     </nav>
+    <div id="menu" class="hidden md:hidden flex flex-col items-center text-green-300 gap-x-5 font-mono bg-gray-900 gap-y-2 py-4 text-sm">
+      <p onclick="getupcomingMovies()" class="cursor-pointer upcoming">Upcoming Movies</p>
+      <p onclick="getTopratedMovies()" class="cursor-pointer Top">Top_Rated Movies</p>
+      <p onclick="getPopularMovies()" class="cursor-pointer Popular">Popular Movies</p>
+      <p onclick="getTrendingMovies()" class="cursor-pointer Trending">Trending movies</p>
+    </div>
+    </div>
 
     <!-- search bar  -->
     <section class="">
@@ -43,10 +62,11 @@
           <input
             id="search"
             type="text "
-            placeholder="Search Movies"
+            placeholder="Movie Name"
+            
             class="
               pl-4
-              md:pr-48
+              md:w-96
               outline-none
               rounded-md
               border-gray-900 border-2
@@ -58,6 +78,7 @@
         </form>
       </div>
     </section>
+    <h1 id="heading" class="text-2xl text-green-400 font-serif text-center mt-4 bg-gray-900">Trending Movies</h1>
     <section
       id="movies"
       class="
@@ -69,7 +90,9 @@
         mt-10
         max-w-5xl
       "
-    ></section>
+    >
+   
+  </section>
     <section
       id="searchmovies"
       class="
@@ -81,7 +104,9 @@
         mt-10
         max-w-5xl
       "
-    ></section>
+    >
+
+
   </body>
   <script src="./index.js"></script>
 </html>

@@ -12,16 +12,26 @@
   </head>
   <body class="bg-gray-900">
     <!-- Header -->
-    <nav class="bg-gray-900 pb-2 px-5 border-b">
+    <nav class="bg-gray-900 pb-2 px-5 border-b sticky top-0">
       <h1 class="ml-10 mt-4 text-xl font-mono font-medium text-green-300">
         Movies App
       </h1>
     </nav>
     <!-- Details section -->
-    <section id="Details" class=" "></section>
+    <section id="Details" class=""></section>
+    <h1 class="text-green-500 text-3xl text-center my-5 bg-gray-900 py-2">
+      Similar Movies
+    </h1>
+    <section class="flex justify-center mb-2">
+      <section
+        id="related"
+        class="flex gap-x-2 overflow-x-auto md:max-w-7xl"
+      ></section>
+    </section>
   </body>
   <script src="./index.js"></script>
   <script>
     getmovie();
+    getrelated();
   </script>
 </html>
